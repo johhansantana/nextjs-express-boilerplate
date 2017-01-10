@@ -1,6 +1,12 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var app = express();
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 var Kitten = require('./models/kittens')(mongoose);
 
 mongoose.connect('mongodb://localhost/test');
@@ -31,6 +37,6 @@ app.post('/kitty', function (req, res) {
   });
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+app.listen(3001, function () {
+  console.log('Example app listening on port 3001!')
 });
