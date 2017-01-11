@@ -1,6 +1,9 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var app = express();
+/**
+ * Uncomment these lines if you need cross origin domain request.
+ */
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -23,7 +26,6 @@ db.on('error', console.error.bind(console, 'connection error:'));
 app.get('/', function (req, res) {
   Kitten.find(function (err, kittens) {
     if (err) return console.error(err);
-    console.log('all the kittens: ', kittens);
     res.send(kittens);
   });
 });

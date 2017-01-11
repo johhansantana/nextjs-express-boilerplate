@@ -4,7 +4,9 @@
   "description": "nextjs with express boilerplate",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js"
+    "dev": "node index.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node index.js"
   },
   "author": "",
   "license": "ISC",
