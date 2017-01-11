@@ -28,6 +28,6 @@ If you navigate to `http://localhost:3001/` you will see the list of kittens (an
 
 ###NextJS with Redux boilerplate
 
-If you want to test this easily check my other repository [https://github.com/jsantana90/nextjs-redux-boilerplate].
+If you want to test this easily check my other repository [https://github.com/jsantana90/nextjs-redux-boilerplate] which connects to this api server, just run the two at the same time and make the necessary changes to the environment variables and endpoints to point to localhost.
 
 Or check the demo [https://nextjs-redux-boilerplate-toocsyxoax.now.sh]
