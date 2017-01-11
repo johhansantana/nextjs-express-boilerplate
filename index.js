@@ -1,6 +1,14 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var app = express();
+var Kitten = require('./models/kittens')(mongoose);
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json());
 /**
  * Uncomment these lines if you need cross origin domain request.
  */
@@ -10,9 +18,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-var Kitten = require('./models/kittens')(mongoose);
-
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect(process.env.MONGO_URL);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -31,7 +37,8 @@ app.get('/', function (req, res) {
 });
 
 app.post('/kitty', function (req, res) {
-  var fluffy = new Kitten({ name: 'fluffy2' });
+  console.log(req.body);
+  var fluffy = new Kitten({ name: req.body.name });
 
   fluffy.save(function (err, fluffy) {
     if (err) return console.error(err);
