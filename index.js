@@ -22,12 +22,6 @@ mongoose.connect(process.env.MONGO_URL);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function() {
-//   Kitten.find(function (err, kittens) {
-//     if (err) return console.error(err);
-//     console.log('all the kittens: ', kittens);
-//   });
-// });
 
 app.get('/', function (req, res) {
   Kitten.find(function (err, kittens) {
