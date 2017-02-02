@@ -1,9 +1,9 @@
-module.exports = function (mongoose) {
-  var kittySchema = mongoose.Schema({
-    name: String
-  });
+var mongoose = require('mongoose');
 
-  var Kitten = mongoose.model('Kitten', kittySchema);
+var Schema = mongoose.Schema;
 
-  return Kitten;
-};
+var kittySchema = new Schema({
+  name: String
+});
+
+module.exports = mongoose.model('Kitten', kittySchema);

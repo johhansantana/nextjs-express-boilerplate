@@ -1,6 +1,6 @@
 {
   "name": "nextjs-express-boilerplate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "nextjs with express boilerplate",
   "main": "index.js",
   "scripts": {
