@@ -44,4 +44,4 @@ or just do `now` and add your mongodb url to the `index.js` file.
 
 If you want to test this easily check my other repository [https://github.com/johhansantana/nextjs-redux-boilerplate] which connects to this api server, just run the two at the same time and make the necessary changes to the environment variables and endpoints to point to localhost.
 
-Or check the demo [https://nextjs-redux-boilerplate-cgbwmbbdpr.now.sh]
+Or check the demo [https://nextjs-express-boilerplate.now.sh/api/kittens]
