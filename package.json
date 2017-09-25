@@ -8,7 +8,7 @@
     "alias": "nextjs-express-boilerplate"
   },
   "scripts": {
-    "dev": "node index.js",
+    "dev": "nodemon -w index.js -w models/* -w routes/* -w package.json index.js",
     "build": "next build",
     "start": "NODE_ENV=production node index.js"
   },
@@ -22,5 +22,8 @@
     "next": "^3.2.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
