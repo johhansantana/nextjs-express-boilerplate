@@ -17,14 +17,15 @@ Start it by doing the following:
 
 ```bash
 export MONGO_URL=*your mongodb url* // you can get one for free at https://www.mlab.com/home
+npm run build
 npm run dev
 ```
 
-Now you will have your api server running.
+Now you will have your API server running.
 
-For now it only has 2 endpoints, which is a get `/` and a post `/kitty`.
+For now it only has 2 endpoints, which is a GET and POST to `/api/kittens`
 
-If you navigate to `http://localhost:3001/` you will see the list of kittens (an empty array if you haven't added one);
+If you navigate to `http://localhost:3001/` you will see a [Next.js](https://github.com/zeit/next.js) page with a list of kittens (or an empty list if you haven't added one).
 
 ###Deploy with now
 

@@ -1,6 +1,6 @@
 {
   "name": "nextjs-express-boilerplate",
-  "version": "1.1.2",
+  "version": "1.2.1",
   "description": "nextjs with express boilerplate",
   "main": "index.js",
   "now": {
@@ -8,7 +8,7 @@
     "alias": "nextjs-express-boilerplate"
   },
   "scripts": {
-    "dev": "node index.js",
+    "dev": "nodemon -w index.js -w models/* -w routes/* -w package.json index.js",
     "build": "next build",
     "start": "NODE_ENV=production node index.js"
   },
@@ -17,7 +17,13 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "isomorphic-unfetch": "^2.0.0",
     "mongoose": "^4.7.6",
-    "next": "^1.2.3"
+    "next": "^3.2.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
