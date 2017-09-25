@@ -9,7 +9,7 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
-const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost/next-event-guide'
+const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost/nextjs-express-boilerplate'
 const PORT = 3001
 
 app.prepare().then(() => {
